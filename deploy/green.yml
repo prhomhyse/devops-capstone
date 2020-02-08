@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: green-deployment
+  labels:
+    app: green-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: green-app
+  template:
+    metadata:
+      labels:
+        app: green-app
+    spec:
+      containers:
+        - name: devops-capstone
+          image: prhomhyse/devops-capstone:latest
+          ports:
+            - containerPort: 80
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: webapp-service
+spec:
+  selector:
+    app: green-app
+  ports:
+    - protocol: TCP
+      port: 80
+  type: LoadBalancer
+---
+

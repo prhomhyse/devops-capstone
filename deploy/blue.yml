@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: blue-deployment
+  labels:
+    app: blue-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: blue-app
+  template:
+    metadata:
+      labels:
+        app: blue-app
+    spec:
+      containers:
+        - name: devops-capstone
+          image: prhomhyse/devops-capstone:latest
+          ports:
+            - containerPort: 80
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: webapp-service
+spec:
+  selector:
+    app: blue-app
+  ports:
+    - protocol: TCP
+      port: 80
+  type: LoadBalancer
+---
+

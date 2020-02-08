@@ -33,6 +33,6 @@
   },
   {
     "ParameterKey": "KeyName",
-    "ParameterValue": "eks-node-KP-eu-central-1"
+    "ParameterValue": "udacity-nano"
   }
 ]

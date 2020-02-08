@@ -373,7 +373,7 @@ Resources:
     Properties:
       AssociatePublicIpAddress: true
       IamInstanceProfile: !Ref NodeInstanceProfile
-      ImageId: ami-0f64557dd6506a4aa
+      ImageId: ami-00bb6f60
       InstanceType: t3.medium
       KeyName: !Ref KeyName
       SecurityGroups:

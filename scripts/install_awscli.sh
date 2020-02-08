@@ -18,7 +18,8 @@ python3 get-pip.py --user
 # export PATH=~/.local/bin:$PATH
 # source ~/.bashrc
 # Now install aws-cli
-apt install awscli
+pip3 install awscli --upgrade --user
+##If you face any issues, you have to force a reinstall of pip [https://askubuntu.com/questions/1025189/pip-is-not-working-importerror-no-module-named-pip-internal]
 # check pip3 version
 # pip3 --version
 
@@ -27,6 +28,7 @@ sudo cp -r ~/.local/bin/* /usr/local/bin/
 sudo su jenkins
 curl -O https://bootstrap.pypa.io/get-pip.py
 python3 get-pip.py --user
+pip3 install awscli --upgrade --user
 
 # Install pylint and flask
 pip3 install pylint --user

@@ -1,0 +1,38 @@
+[
+  {
+    "ParameterKey": "EnvironmentName",
+    "ParameterValue": "Cloud DevOps Capstone project"
+  },
+  {
+    "ParameterKey": "VpcBlock",
+    "ParameterValue": "192.168.0.0/16"
+  },
+  {
+    "ParameterKey": "Subnet01Block",
+    "ParameterValue": "192.168.64.0/18"
+  },
+  {
+    "ParameterKey": "Subnet02Block",
+    "ParameterValue": "192.168.128.0/18"
+  },
+  {
+    "ParameterKey": "Subnet03Block",
+    "ParameterValue": "192.168.192.0/18"
+  },
+  {
+    "ParameterKey": "ClusterName",
+    "ParameterValue": "zetacluster"
+  },
+  {
+    "ParameterKey": "NodeGroupName",
+    "ParameterValue": "nodegp1"
+  },
+  {
+    "ParameterKey": "NodeAutoScalingGroupDesiredCapacity",
+    "ParameterValue": "2"
+  },
+  {
+    "ParameterKey": "KeyName",
+    "ParameterValue": "eks-node-KP-eu-central-1"
+  }
+]

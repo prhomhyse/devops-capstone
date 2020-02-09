@@ -23,7 +23,7 @@ pipeline {
         stage('Building image') {
             steps {
                 script {
-                    sh 'docker build --tag=prhomhyse/capstone-devops-capstone .'
+                    sh 'docker build --tag=prhomhyse/devops-capstone .'
                 }
             }
         }
@@ -42,7 +42,7 @@ pipeline {
             steps {
                script {
                    // Latest
-                   sh 'kubectl apply -f Deployment/green-webapp-deploy.yml'
+                   sh 'kubectl apply -f deploy/green.yml'
                }
             }
         }
@@ -50,7 +50,7 @@ pipeline {
         stage ('Remove old blue deployment from AWS Loadbalancer') {
             steps {
                script {
-                   sh 'kubectl delete deploy/web-deployment-blue'
+                   sh 'kubectl delete deploy/blue-deployment'
                }
             }
         }
@@ -58,7 +58,7 @@ pipeline {
         stage ('Add latest blue deployment to AWS Loadbalancer') {
             steps {
                script {
-                   sh 'kubectl apply -f Deployment/blue-webapp-deploy.yml'
+                   sh 'kubectl apply -f deploy/blue.yml'
                }
             }
         }
@@ -66,7 +66,7 @@ pipeline {
         stage ('Remove old green deployment from AWS Loadbalancer') {
             steps {
                script {
-                   sh 'kubectl delete deploy/web-deployment-green'
+                   sh 'kubectl delete deploy/green-deployment'
                }
             }
         }

@@ -44,7 +44,7 @@ pip3 install flask --user
 
 # ---------------------------------Update kube-config file------------------------------------------------------------------
 # Update kubernetes cluster configuration
-# aws eks update-kubeconfig --name nginxcluster
+# aws eks update-kubeconfig --name zetacluster
 
 
 # ---------------------------------Update Worker Nodes Configuration---------------------------

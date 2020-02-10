@@ -32,4 +32,16 @@ spec:
       port: 80
   type: LoadBalancer
 ---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  creationTimestamp: "2020-02-10T00:01:07Z"
+  name: jenkins
+  namespace: default
+  resourceVersion: "38603"
+  selfLink: /api/v1/namespaces/default/serviceaccounts/jenkins
+  uid: 700c6108-4b98-11ea-8719-026b4938109a
+secrets:
+  - name: jenkins-token-6zgcr
+---
 

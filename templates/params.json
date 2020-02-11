@@ -25,7 +25,7 @@
   },
   {
     "ParameterKey": "NodeGroupName",
-    "ParameterValue": "nodegp1"
+    "ParameterValue": "ndgp1"
   },
   {
     "ParameterKey": "NodeAutoScalingGroupDesiredCapacity",

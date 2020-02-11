@@ -40,8 +40,10 @@ pipeline {
         stage ('Upload latest green deployment to AWS Loadbalancer') {
             steps {
                script {
+                    withAWS(credentials: 'aws-credentials', region: 'us-west-2'){
                    // Latest
                    sh 'kubectl apply -f deploy/green.yml'
+                  }
                }
             }
         }
@@ -49,7 +51,9 @@ pipeline {
         stage ('Remove old blue deployment from AWS Loadbalancer') {
             steps {
                script {
+                withAWS(credentials: 'aws-credentials', region: 'us-west-2'){
                    sh 'kubectl delete deploy/blue-deployment'
+               }
                }
             }
         }
@@ -57,7 +61,9 @@ pipeline {
         stage ('Add latest blue deployment to AWS Loadbalancer') {
             steps {
                script {
+                   withAWS(credentials: 'aws-credentials', region: 'us-west-2'){
                    sh 'kubectl apply -f deploy/blue.yml'
+                   }
                }
             }
         }
@@ -65,7 +71,9 @@ pipeline {
         stage ('Remove old green deployment from AWS Loadbalancer') {
             steps {
                script {
+                   withAWS(credentials: 'aws-credentials', region: 'us-west-2'){
                    sh 'kubectl delete deploy/green-deployment'
+                   }
                }
             }
         }

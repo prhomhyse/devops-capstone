@@ -42,6 +42,7 @@ pipeline {
                script {
                     withAWS(credentials: 'aws-credentials', region: 'us-west-2'){
                    // Latest
+                   sh "aws eks --region us-west-2 update-kubeconfig --name zetacluster"
                    sh 'kubectl apply -f deploy/green.yml'
                   }
                }

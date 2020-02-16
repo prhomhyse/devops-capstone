@@ -2,7 +2,8 @@
 
 
 # -------------------------------------Pre-requisite-------------------------------------------------
-# chmod +x install-kubectl.sh
+# Like the other scripts except install_awscli.sh, clone the repo and cd into the scripts directory
+# sudo sh install_kube.sh
 
 # -------------------------------------Install kubectl-----------------------------------------------
 apt update

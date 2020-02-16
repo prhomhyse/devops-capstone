@@ -1,11 +1,9 @@
 #!/usr/bin/env bash
 
 # -------------------------------Pre-requiste----------------------------------------
-# sudo su -i (Make sure to login as root)
 # clone repo https://github.com/prhomhyse/devops-capstone
-# change permission on file in script folder
-# sudo chown ubuntu:ubuntu <filename> (optional)
-# chmod +x install-dockers.sh
+# cd into the directory devops-capstone/scripts
+# sudo sh install_docker.sh [Note that this assumes you are using an Amazon EC2 Instance]
 
 
 # -----------------------------Install updates----------------------------------------
